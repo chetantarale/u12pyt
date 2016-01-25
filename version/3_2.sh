@@ -5,7 +5,7 @@ sudo apt-get install -y python3.2 python3.2-dev
 
 # Install virtualenv
 sudo wget https://bitbucket.org/pypa/setuptools/get/7.0.zip
-unzip pypa-setuptools-df26609c2f61.zip
+unzip 7.0.zip
 cd pypa-setuptools-df26609c2f61
 python setup.py
 sudo easy_install pip
