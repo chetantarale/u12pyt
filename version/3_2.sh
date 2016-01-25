@@ -4,8 +4,10 @@
 sudo apt-get install -y python3.2 python3.2-dev
 
 # Install virtualenv
-sudo wget https://bitbucket.org/himanshu0503/setuptools/raw/56f59acef6f225e17cdfec097666551730f5a0c8/ez_setup.py -O /tmp/ez_setup.py
-sudo python3.2 /tmp/ez_setup.py
+sudo wget https://bitbucket.org/pypa/setuptools/get/7.0.zip
+unzip pypa-setuptools-df26609c2f61.zip
+cd pypa-setuptools-df26609c2f61
+python setup.py
 sudo easy_install-3.2 pip
 pip3.2 install virtualenv
 virtualenv -p python3.2 $HOME/venv/3.2
