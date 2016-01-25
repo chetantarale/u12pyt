@@ -10,7 +10,7 @@ echo '==== PWD ===='
 pwd
 echo '==== LS ===='
 ls
-cd virtualenv-13.1.2
+cd /u12pyt/python3.2/virtualenv-13.1.2
 python3.2 setup.py install
 virtualenv --version
 cd ..
