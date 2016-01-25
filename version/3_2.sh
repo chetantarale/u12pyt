@@ -1,20 +1,20 @@
-#!/bin/bash -e
-
-# Install Python 3.2
-sudo apt-get install -y python3.2 python3.2-dev
-
-# Install virtualenv
-sudo wget https://bitbucket.org/pypa/setuptools/get/7.0.zip
-unzip 7.0.zip
-cd pypa-setuptools-df26609c2f61
-python setup.py
-sudo easy_install pip
-pip3.2 install virtualenv
+apt-get install -y python3.2 python3.2-dev
+mkdir python3.2
+cd python3.2
+wget https://bootstrap.pypa.io/3.2/get-pip.py
+python3.2 get-pip.py
+pip uninstall virtualenv
+wget -O /u12pyt/python3.2/virtualenv-13.1.2.tar.gz https://pypi.python.org/packages/source/v/virtualenv/virtualenv-13.1.2.tar.gz#md5=b989598f068d64b32dead530eb25589a
+tar xvfz virtualenv-13.1.2.tar.gz
+cd virtualenv-13.1.2
+python3.2 setup.py install
+virtualenv --version
+cd ..
 virtualenv -p python3.2 $HOME/venv/3.2
 
 # Install pip packages
 . $HOME/venv/3.2/bin/activate
-pip install pyopenssl ndg-httpsclient pyasn1
 pip install nose mock pytest coverage
-CFLAGS="-O0" pip install lxml
+python --version
+pip --version
 deactivate
